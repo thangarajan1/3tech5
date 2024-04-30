@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Govern.css" />
+    <style>
+      .btn {
+        margin-top: 30px;
+        background-color: #b1743b;
+        color: white;
+        font-size: 20px;
+      }
+      .btn:hover {
+        background-color: #e99e58;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-header">
+          <img src="./img/nav.png" alt="" class="navbar-brand" />
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SERVICES
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./servies1.html"
+                    >GOVT AND UTILITY</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./servies2.html"
+                    >RETAIL AND GENERAL CONTRACTORS</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">ABOUT US</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./careers.html">CAREERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container px-5">
+      <h1
+        class="text-center"
+        style="
+          margin-top: 150px;
+          font-size: 26px;
+          font-weight: 900;
+          text-transform: none;
+        "
+      >
+        Fill out the form below to request a free consultation or estimate. Our
+        team will respond to your inquiry promptly.
+      </h1>
+
+      <form action="" onsubmit="sendEmail();reset();return false;" style="margin-top: 100px">
+        <div class="form-group">
+          <h3 style="font-weight: 900; text-transform: none">
+            Personal Information
+          </h3>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="fname" class="form-label"
+                >First Name <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="fname" required />
+            </div>
+            <div class="col-md-6">
+              <label for="lname" class="form-label"
+                >Last Name <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="lname" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="dob" class="form-label"
+                >Date Of <b></b>irth <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="dob" required />
+            </div>
+            <div class="col-md-4">
+              <label for="email" class="form-label"
+                >Email <span class="text-danger">*</span></label
+              >
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="col-md-4">
+              <label for="phone" class="form-label"
+                >Phone <span class="text-danger">*</span></label
+              >
+              <input type="tel" class="form-control" id="phone" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="add1" class="form-label"
+                >Address - 1 <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="add1" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="add2" class="form-label"
+                >Address - 2 <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="add2" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="city" class="form-label"
+                >City <b></b>irth <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="city" required />
+            </div>
+            <div class="col-md-4">
+              <label for="state" class="form-label"
+                >Us State <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="state" required />
+            </div>
+            <div class="col-md-4">
+              <label for="zip" class="form-label"
+                >Zip <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="zip" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="position" class="form-label"
+                >Position Aplying For <span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control" id="position" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="reff" class="form-label">Refeered By </label>
+              <input type="text" class="form-control" id="reff" />
+            </div>
+          </div>
+          <label for="citizan">Are you a U.S. Citizen? </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="citizan"
+              id="citizanyes"
+            />
+            <label class="form-check-label" for="citizanyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="citizan"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="citizanno"
+            />
+            <label class="form-check-label" for="citizanno"> No </label>
+          </div>
+
+          <label for="work"
+            >If no, are you authorized to work in the United States? </label
+          >
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="work"
+              id="workyes"
+            />
+            <label class="form-check-label" for="workyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="work"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="workno"
+            />
+            <label class="form-check-label" for="workno"> No </label>
+          </div>
+          <label for="company">Have you ever worked for this company? </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="company"
+              id="companyyes"
+            />
+            <label class="form-check-label" for="companyyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="company"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="companyno"
+            />
+            <label class="form-check-label" for="companyno"> No </label>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="when" class="form-label">If so, when?</label>
+              <input type="text" class="form-control" id="when" />
+            </div>
+          </div>
+          <label for="felony">Have you ever been convicted of a felony? </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="felony"
+              id="felonyyes"
+            />
+            <label class="form-check-label" for="felonyyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="felony"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="felonyno"
+            />
+            <label class="form-check-label" for="felonyno"> No </label>
+          </div>
+          <h4>EDUCATION</h4>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="hr" class="form-label">High School</label>
+              <input type="text" class="form-control" id="hr" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="add" class="form-label">Address</label>
+              <input type="text" class="form-control" id="add" />
+            </div>
+          </div>
+          <label for="graduate">Did you graduate HS? </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="graduate"
+              id="graduateyes"
+            />
+            <label class="form-check-label" for="graduateyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="graduate"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="graduateno"
+            />
+            <label class="form-check-label" for="graduateno"> No </label>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="when1" class="form-label">If so, when?</label>
+              <input type="text" class="form-control" id="when1" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="college" class="form-label">College</label>
+              <input type="text" class="form-control" id="college" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="add3" class="form-label">Address</label>
+              <input type="text" class="form-control" id="add3" />
+            </div>
+          </div>
+          <label for="clg">Did you graduate College? </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="yes"
+              name="clg"
+              id="clgyes"
+            />
+            <label class="form-check-label" for="clgyes"> Yes </label>
+          </div>
+          <div class="form-check">
+            <input
+              name="clg"
+              class="form-check-input"
+              type="radio"
+              value="no"
+              id="clgno"
+            />
+            <label class="form-check-label" for="clgno"> No </label>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="when3" class="form-label">If so, when?</label>
+              <input type="text" class="form-control" id="when3" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="degree" class="form-label">Degree</label>
+              <input type="text" class="form-control" id="degree" />
+            </div>
+          </div>
+          <h4>Work History</h4>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="job" class="form-label">Previous Job Title</label>
+              <input type="text" class="form-control" id="job" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="datejob" class="form-label"
+                >Date Previous Job Started</label
+              >
+              <input type="text" class="form-control" id="datejob" />
+            </div>
+            <div class="col-md-6">
+              <label for="jobend" class="form-label"
+                >Date Previous Job Ended</label
+              >
+              <input type="text" class="form-control" id="jobend" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="des" class="form-label"
+                >Previous Job Description </label
+              >
+              <textarea
+                name="des"
+                id="des"
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+          <h4>Work History 2</h4>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="job1" class="form-label">Previous Job Title</label>
+              <input type="text" class="form-control" id="job1" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="datejob1" class="form-label"
+                >Date Previous Job Started</label
+              >
+              <input type="text" class="form-control" id="datejob1" />
+            </div>
+            <div class="col-md-6">
+              <label for="jobend1" class="form-label"
+                >Date Previous Job Ended</label
+              >
+              <input type="text" class="form-control" id="jobend1" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="des1" class="form-label"
+                >Previous Job Description </label
+              >
+              <textarea
+                name="des1"
+                id="des1"
+                cols="30"
+                rows="5"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+          <h4>References</h4>
+          <div class="row">
+            <div class="col-md-8">
+              <label for="reff1" class="form-label">Reference 1</label>
+              <input type="text" class="form-control" id="reff1" />
+            </div>
+            <div class="col-md-4">
+              <label for="reffph" class="form-label">Reference 1 Phone</label>
+              <input type="text" class="form-control" id="reffph" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <label for="reff2" class="form-label">Reference 2</label>
+              <input type="text" class="form-control" id="reff2" />
+            </div>
+            <div class="col-md-4">
+              <label for="reffph2" class="form-label">Reference 2 Phone</label>
+              <input type="text" class="form-control" id="reffph2" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <label for="reff3" class="form-label">Reference 3</label>
+              <input type="text" class="form-control" id="reff3" />
+            </div>
+            <div class="col-md-4">
+              <label for="reffph3" class="form-label">Reference 3 Phone</label>
+              <input type="text" class="form-control" id="reffph3" />
+            </div>
+          </div>
+          <label for="upload" class="form-label">Upload Resume</label>
+          <input type="file" name="upload" id="upload" class="form-control" />
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div
+      class="d-flex justify-content-around align-items-center"
+      style="background-color: #e9e9e9; padding-top: 20px; flex-wrap: wrap"
+    >
+      <div class="row" style="padding: 10px 50px">
+        <div class="col-md-6">
+          <h1 style="font-size: 20px; font-weight: 900">
+            Looking for a quality paving and concrete expert for your next
+            project?
+          </h1>
+        </div>
+        <div class="col-md-6">
+          <p style="font-size: 25px; text-align: center">Request an Estimate</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 50px">
+      <div class="col-md-6 footer">
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="col-md-6 f1">
+        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+      </div>
+    </div>
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="./index.js"></script>
+  </body>
+</html>
